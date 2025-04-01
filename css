@@ -1,0 +1,127 @@
+body {
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; /* Changed to min-height for mobile scrolling */
+    margin: 0;
+    background-color: #1a1a1a;
+    color: #ffffff;
+    overflow-y: auto; /* Allow scrolling if content overflows */
+}
+
+#app {
+    text-align: center;
+    padding: 15px; /* Slightly reduced for mobile */
+    background: rgba(40, 40, 40, 0.9);
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    width: 90%; /* Responsive width */
+    max-width: 500px; /* Cap for larger screens */
+    margin: 10px; /* Add margin for edge spacing */
+}
+
+h1 {
+    font-size: 2em; /* Slightly smaller base size */
+    margin-bottom: 10px;
+    color: #00d4ff;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+#timer {
+    font-size: 3.5em; /* Reduced from 4em for mobile */
+    font-weight: bold;
+    margin: 15px 0;
+    color: #ffffff;
+    transition: color 0.3s ease;
+}
+
+#subtitle {
+    font-size: 1.1em; /* Slightly smaller */
+    color: #b0b0b0;
+    margin-bottom: 15px;
+    font-style: italic;
+    transition: opacity 0.5s ease;
+}
+
+#topics-container {
+    margin-bottom: 15px;
+    padding: 10px;
+    background: rgba(60, 60, 60, 0.8);
+    border-radius: 10px;
+    color: #e0e0e0;
+    word-wrap: break-word; /* Prevent overflow */
+}
+
+#topics-container p {
+    margin: 5px 0;
+    font-size: 0.9em; /* Smaller for mobile */
+}
+
+#topics-container strong {
+    color: #00d4ff;
+}
+
+.button-container {
+    display: flex;
+    flex-wrap: wrap; /* Allow wrapping on small screens */
+    gap: 8px; /* Reduced from 10px */
+    justify-content: center;
+    padding: 10px 0;
+}
+
+button {
+    padding: 10px 20px; /* Slightly smaller but touch-friendly */
+    font-size: 1em;
+    cursor: pointer;
+    background-color: #00d4ff;
+    color: #1a1a1a;
+    border: none;
+    border-radius: 25px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    min-width: 80px; /* Ensure tap targets are big enough */
+    touch-action: manipulation; /* Improve touch responsiveness */
+}
+
+button:hover {
+    background-color: #00b0cc;
+    transform: scale(1.05);
+}
+
+button:active {
+    transform: scale(0.95);
+}
+
+#topics {
+    background-color: #8a2be2;
+}
+
+#topics:hover {
+    background-color: #6a1bb2;
+}
+
+/* Mobile adjustments */
+@media (max-width: 600px) {
+    h1 {
+        font-size: 1.5em; /* Smaller title */
+    }
+    #timer {
+        font-size: 2.5em; /* Scale down timer */
+    }
+    #subtitle {
+        font-size: 0.9em;
+    }
+    #topics-container p {
+        font-size: 0.8em;
+    }
+    button {
+        padding: 8px 16px; /* Even smaller but still tappable */
+        font-size: 0.9em;
+        min-width: 70px;
+    }
+    #app {
+        padding: 10px;
+        margin: 5px;
+    }
+}
