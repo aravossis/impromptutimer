@@ -1,16 +1,28 @@
-<div id="app">
-    <h1>Impromptu Speech Timer</h1>
-    <div id="timer">00:00</div>
-    <h2 id="subtitle">Click Start to Begin</h2>
-    <div id="topics-container" style="display: none;">
-        <p><strong>Word:</strong> <span id="random-word"></span></p>
-        <p><strong>Quote:</strong> <span id="random-quote"></span></p>
-        <p><strong>Unfinished Sentence:</strong> <span id="random-sentence"></span></p>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Impromptu Speech Timer</title>
+    <link rel="stylesheet" href="css">
+</head>
+<body>
+    <div id="app">
+        <h1>Impromptu Speech Timer</h1>
+        <div id="timer">00:00</div>
+        <h2 id="subtitle">Click Start to Begin</h2>
+        <div id="topics-container" style="display: none;">
+            <p><strong>Word:</strong> <span id="random-word"></span></p>
+            <p><strong>Quote:</strong> <span id="random-quote"></span></p>
+            <p><strong>Unfinished Sentence:</strong> <span id="random-sentence"></span></p>
+        </div>
+        <div class="button-container">
+            <button id="topics">Topics</button>
+            <button id="start">Start</button>
+            <button id="stop">Stop</button>
+        </div>
     </div>
-    <div class="button-container">
-        <button id="topics">Topics</button>
-        <button id="start">Start</button>
-        <button id="stop">Stop</button>
-    </div>
-</div>
-<audio id="ding" src="https://www.soundjay.com/buttons/beep-01a.mp3" preload="auto"></audio>
+    <audio id="ding" src="https://www.soundjay.com/buttons/beep-01a.mp3" preload="auto"></audio>
+    <script src="script.js"></script>
+</body>
+</html>
